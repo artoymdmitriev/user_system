@@ -12,6 +12,11 @@ gem 'therubyracer', '~> 0.12.3'
 gem 'devise', '~> 4.3'
 gem 'omniauth', '~> 1.6', '>= 1.6.1'
 gem 'omniauth-facebook', '~> 4.0'
+gem 'omniauth-twitter', '~> 1.4'
+gem 'omniauth-vkontakte', '~> 1.4'
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
+gem 'hirb', '~> 0.7.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
