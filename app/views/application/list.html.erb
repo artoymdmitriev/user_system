@@ -1,12 +1,12 @@
 <table class = "table_class">                         
   <tr>                          
     <th>email</th>
-    <th>date</th>
+    <th>account source</th>
   </tr>
 <% @users.each do |user| %>       
   <tr>
     <td><%= user.email %></td>
-    <td><%= user.current_sign_in_at %></td>
+    <td><%= user.provider != nil ? user.provider : 'Local Account' %></td>
   </tr>
 <% end %>
 </table>
