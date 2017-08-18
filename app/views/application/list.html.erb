@@ -6,7 +6,7 @@
 <% @users.each do |user| %>       
   <tr>
     <td><%= user.email %></td>
-    <td><%= user.provider != nil ? user.provider : 'Local Account' %></td>
+    <td><%= user.provider != nil ? user.provider.capitalize! + ' account' : 'Local account' %></td>
   </tr>
 <% end %>
-</table>
+</table>	
