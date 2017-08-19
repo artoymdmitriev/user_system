@@ -13,10 +13,4 @@ class ApplicationController < ActionController::Base
   def list
   	@users = User.all
   end
-
-  def block
-  end
-
-  def unblock
-  end
 end

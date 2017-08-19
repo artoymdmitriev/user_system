@@ -1,12 +1,14 @@
 <table class = "table_class">                         
   <tr>                          
-    <th>email</th>
-    <th>account source</th>
+    <th>Email address</th>
+    <th>Account source</th>
+    <th>Action</th>
   </tr>
 <% @users.each do |user| %>       
   <tr>
     <td><%= user.email %></td>
     <td><%= user.provider != nil ? user.provider.capitalize! + ' account' : 'Local account' %></td>
+    <td><%= user.is_blocked ? link_to("Blocked", unblock_user_path(user), class: "btn btn-small btn-danger") : link_to("Unblocked", block_user_path(user), class: "btn btn-small btn-success") %></td>
   </tr>
 <% end %>
 </table>	

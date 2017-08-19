@@ -115,6 +115,9 @@ GEM
       rack (>= 1.6.2, < 3)
     omniauth-facebook (4.0.0)
       omniauth-oauth2 (~> 1.2)
+    omniauth-instagram (1.1.0)
+      omniauth (~> 1)
+      omniauth-oauth2 (~> 1)
     omniauth-oauth (1.1.0)
       oauth
       omniauth (~> 1.0)
@@ -229,6 +232,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   omniauth (~> 1.6, >= 1.6.1)
   omniauth-facebook (~> 4.0)
+  omniauth-instagram (~> 1.1)
   omniauth-twitter (~> 1.4)
   omniauth-vkontakte (~> 1.4)
   puma (~> 3.0)
