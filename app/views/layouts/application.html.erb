@@ -48,8 +48,7 @@
         <a class="navbar-brand" href="#">UserSystem</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Users", "/"  %></li>
-            <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+            <%= render "devise/shared/navbar_links" %>
           </ul>
         </div>
       </div>

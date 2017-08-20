@@ -9,6 +9,7 @@
     <td><%= user.email %></td>
     <td><%= user.provider != nil ? user.provider.capitalize! + ' account' : 'Local account' %></td>
     <td><%= user.is_blocked ? link_to("Blocked", unblock_user_path(user), class: "btn btn-small btn-danger") : link_to("Unblocked", block_user_path(user), class: "btn btn-small btn-success") %></td>
+    <td><%= link_to "Delete", delete_user_path(user), class: "btn btn-small btn-warning" %></td>
   </tr>
 <% end %>
 </table>	

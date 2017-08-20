@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   	member do
       get :block
       get :unblock
+      get :delete
   	end
   end
 end
