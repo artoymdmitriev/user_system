@@ -44,3 +44,7 @@ body {
  .list-text {
  	font-size: 25px;
  }
+
+ .margin-class {
+   padding: 10px;
+ }

@@ -1,13 +1,13 @@
 <div class="container list-text">
   <% @users.each do |user| %>      
     <div class="row">
-      <div class="col-6 col-md-2">
+      <div class="col-6 col-lg-4">
         <%= user.email %>
       </div>
-      <div class="col-6 col-md-2">
+      <div class="col-6 col-lg-3">
         <%= user.provider != nil ? user.provider.capitalize! + ' account' : 'Local account' %>
       </div>
-      <div class="col-6 col-md-2">
+      <div class="col-6 col-lg-1">
         <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Action
             <span class="caret"></span></button>
