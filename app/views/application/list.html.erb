@@ -1,15 +1,22 @@
-<table class = "table_class">                         
-  <tr>                          
-    <th>Email address</th>
-    <th>Account source</th>
-    <th>Action</th>
-  </tr>
-<% @users.each do |user| %>       
-  <tr>
-    <td><%= user.email %></td>
-    <td><%= user.provider != nil ? user.provider.capitalize! + ' account' : 'Local account' %></td>
-    <td><%= user.is_blocked ? link_to("Blocked", unblock_user_path(user), class: "btn btn-small btn-danger") : link_to("Unblocked", block_user_path(user), class: "btn btn-small btn-success") %></td>
-    <td><%= link_to "Delete", delete_user_path(user), class: "btn btn-small btn-warning" %></td>
-  </tr>
-<% end %>
-</table>	
+<div class="container list-text">
+  <% @users.each do |user| %>      
+    <div class="row">
+      <div class="col-6 col-md-2">
+        <%= user.email %>
+      </div>
+      <div class="col-6 col-md-2">
+        <%= user.provider != nil ? user.provider.capitalize! + ' account' : 'Local account' %>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Action
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <%= user.is_blocked ? link_to("Unblock", unblock_user_path(user), class: "btn btn-small btn-success") : link_to("Block", block_user_path(user), class: "btn btn-small btn-warning") %>
+              <%= link_to "Delete", delete_user_path(user), class: "btn btn-small btn-danger" %>
+            </ul>
+          </div>
+      </div>
+    </div>
+  <% end %>  
+</div>
