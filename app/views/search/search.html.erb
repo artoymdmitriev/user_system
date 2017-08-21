@@ -1,0 +1,10 @@
+<%= render "search/shared/search" %>
+
+<% @all_items.each do |item| %>
+  <ul class="item">
+  	<a href="<%= item.link %>"><%= item.name %></a>
+  	<div class="item-price"><%= item.price %></div>
+  	<img src="<%= item.pic_link %>" alt="<%= item.name %>">
+  </ul>
+  <hr>
+<% end %>

@@ -15,3 +15,14 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+ $('div#parentDiv').on('click', '.search-link', function(){
+  var search_val = $('#keyword').val().trim();
+  if(search_val != ''){
+    window.location.href='/search/'+search_val+'/search';
+  } else{
+    alert('You need to enter some data');
+  }
+ });
+});

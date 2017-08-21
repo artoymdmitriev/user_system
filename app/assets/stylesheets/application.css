@@ -14,8 +14,7 @@
  *= require_self
  *= require bootstrap_and_overrides
  */
-@import "font-awesome-sprockets";
-@import "font-awesome";
+
 html,
 body {
    margin:0;
@@ -101,4 +100,20 @@ body {
 
 .img-class {
   margin: 10px;
+}
+
+.item {
+  margin-top: 10px;
+}
+
+.item-name {
+  font-size: 20px;
+}
+
+.item-price {
+
+}
+
+.item-link {
+
 }
