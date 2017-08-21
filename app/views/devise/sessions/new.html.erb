@@ -1,6 +1,6 @@
 <h2>Log in</h2>
 <div class="modal-body row">
-  <div class="col-md-3" align="center">
+  <div class="col-md-4" align="center">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -23,8 +23,6 @@
     <%= f.submit "Log in", :class => 'btn btn-small btn-default' %>
   </div>
 <% end %>
-  </div>
-  <div class="col-md-4" align="center">
     <%= render "devise/shared/links" %>
   </div>
 </div>

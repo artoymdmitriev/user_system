@@ -2,20 +2,16 @@
   <% @users.each do |user| %>      
     <div class="row">
       <div class="col-6 col-lg-4">
-        <%= user.email %>
+        <div class="dropdown">
+          <button class="dropbtn"><%= user.email %></button>
+          <div class="dropdown-content">
+            <%= user.is_blocked ? link_to("Unblock", unblock_user_path(user), class: "btn btn-small btn-success") : link_to("Block", block_user_path(user), class: "btn btn-small btn-warning") %>
+            <%= link_to "Delete", delete_user_path(user), class: "btn btn-small btn-danger" %>
+          </div>
+        </div>
       </div>
       <div class="col-6 col-lg-3">
         <%= user.provider != nil ? user.provider.capitalize! + ' account' : 'Local account' %>
-      </div>
-      <div class="col-6 col-lg-1">
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Action
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-              <%= user.is_blocked ? link_to("Unblock", unblock_user_path(user), class: "btn btn-small btn-success") : link_to("Block", block_user_path(user), class: "btn btn-small btn-warning") %>
-              <%= link_to "Delete", delete_user_path(user), class: "btn btn-small btn-danger" %>
-            </ul>
-          </div>
       </div>
     </div>
   <% end %>  

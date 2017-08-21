@@ -2,9 +2,6 @@
   <%= button_to "Log in", new_session_path(resource_name), class: "btn btn-small btn-default" %><br />
 <% end -%>
 
-<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= button_to "Create new account", new_registration_path(resource_name), :method => :get, class: "btn btn-small btn-default" %><br />
-<% end -%>
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
   <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />
 <% end -%>
@@ -13,8 +10,21 @@
   <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
 <% end -%>
 
- <%- if devise_mapping.omniauthable? %>
-  <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), class: "btn btn-small btn-default" %><br />
-  <% end -%>
- <% end -%>
+<div class="container" align="center">
+  <div class="row">
+    <div class="col-md-1">
+    <%= link_to image_tag("facebook.png", :alt => "facebook icon", :class => "img-class"), omniauth_authorize_path(resource_name, :facebook) %><br />
+  </div>
+  <div class="col-md-1">
+    <%= link_to image_tag("twitter.png", :alt => "twitter icon", :class => "img-class"), omniauth_authorize_path(resource_name, :twitter) %><br />
+  </div>
+  <div class="col-md-1">
+    <%= link_to image_tag("vk.png", :alt => "vk icon", :class => "img-class"), omniauth_authorize_path(resource_name, :vkontakte) %><br />  
+  </div>
+  <div class="col-md-1">
+    <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <%= link_to image_tag("new-account.png", :alt => "new account icon", :class => "img-class"), new_registration_path(resource_name), :method => :get %><br />
+<% end -%>
+  </div>
+  </div>
+</div>

@@ -14,6 +14,7 @@ gem 'omniauth', '~> 1.6', '>= 1.6.1'
 gem 'omniauth-facebook', '~> 4.0'
 gem 'omniauth-twitter', '~> 1.4'
 gem 'omniauth-vkontakte', '~> 1.4'
+gem 'font-awesome-sass', '~> 4.7'
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 gem 'hirb', '~> 0.7.3'
