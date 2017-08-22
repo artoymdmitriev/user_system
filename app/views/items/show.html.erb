@@ -1,0 +1,7 @@
+<%= render "search/shared/search" %>
+
+<div id="items">
+  <h1>Search results:</h1>
+  <%= render @items %>
+</div>
+<%= will_paginate @items %>

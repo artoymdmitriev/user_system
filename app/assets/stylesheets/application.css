@@ -14,6 +14,7 @@
  *= require_self
  *= require bootstrap_and_overrides
  */
+@import "bootstrap";
 
 html,
 body {
@@ -111,9 +112,10 @@ body {
 }
 
 .item-price {
-
+  font-size: 18px;
 }
 
-.item-link {
-
+.item-shop {
+  font-size: 18px;
+  font-style: italic;
 }

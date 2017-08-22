@@ -7,7 +7,6 @@ class BelchipWebsite < ElectronicsWebsite
   
   def get_items
     get_webpage
-    return @electronic_items
   end
 
   def get_webpage
@@ -31,7 +30,8 @@ class BelchipWebsite < ElectronicsWebsite
     item.price = get_item_price item_html
     item.pic_link = get_item_pic_link item_html
     item.shop_name = get_shop_name
-    add_item_to_array item
+    Item.create!(name: item.name, price: item.price, link: item.link, pic_link: item.pic_link, shop_name: item.shop_name)
+
   end
 
   def add_item_to_array item

@@ -15,4 +15,6 @@ Rails.application.routes.draw do
       get :search
     end
   end
+
+  get 'items/show'
 end

@@ -8,7 +8,6 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.5'
-gem 'therubyracer', '~> 0.12.3'
 gem 'devise', '~> 4.3'
 gem 'omniauth', '~> 1.6', '>= 1.6.1'
 gem 'omniauth-facebook', '~> 4.0'
@@ -19,6 +18,13 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem "twitter-bootstrap-rails"
 gem 'hirb', '~> 0.7.3'
 gem 'nokogiri', '~> 1.8'
+#///
+#gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+#gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+#gem 'bootstrap-will_paginate', '~> 1.0'
+#gem 'execjs', '~> 2.7'
+#///
+gem 'will_paginate', '~> 3.0.7'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -30,7 +36,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
