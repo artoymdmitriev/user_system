@@ -13,17 +13,11 @@ gem 'omniauth', '~> 1.6', '>= 1.6.1'
 gem 'omniauth-facebook', '~> 4.0'
 gem 'omniauth-twitter', '~> 1.4'
 gem 'omniauth-vkontakte', '~> 1.4'
-gem 'font-awesome-sass', '~> 4.7'
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails"
+#gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+#gem "twitter-bootstrap-rails"
+gem 'bootstrap-sass'
 gem 'hirb', '~> 0.7.3'
 gem 'nokogiri', '~> 1.8'
-#///
-#gem 'will_paginate', '~> 3.1', '>= 3.1.6'
-#gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
-#gem 'bootstrap-will_paginate', '~> 1.0'
-#gem 'execjs', '~> 2.7'
-#///
 gem 'will_paginate', '~> 3.0.7'
 
 # Use Puma as the app server
