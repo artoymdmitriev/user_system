@@ -18,6 +18,7 @@ gem "twitter-bootstrap-rails"
 gem 'hirb', '~> 0.7.3'
 gem 'nokogiri', '~> 1.8'
 gem 'will_paginate', '~> 3.0.7'
+gem 'sprockets', '~> 3.7', '>= 3.7.1'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
